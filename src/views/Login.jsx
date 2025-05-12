@@ -141,7 +141,7 @@ const Login = ({ mode }) => {
           </div>
           <Alert icon={false} className='bg-[var(--mui-palette-primary-lightOpacity)]'>
             <Typography variant='body2' color='primary.main'>
-              Email: <span className='font-medium'>admin@materialize.com</span> / Pass:{' '}
+              Email: <span className='font-medium'>admin@ICBrisbane.com</span> / Pass:{' '}
               <span className='font-medium'>admin</span>
             </Typography>
           </Alert>
@@ -239,7 +239,7 @@ const Login = ({ mode }) => {
             sx={{ '& .MuiButton-startIcon': { marginInlineEnd: 3 } }}
             onClick={() => signIn('google')}
           >
-            Sign in with Google
+            Sign in Google
           </Button>
         </div>
       </div>
@@ -248,3 +248,9 @@ const Login = ({ mode }) => {
 }
 
 export default Login
+
+
+
+
+
+
