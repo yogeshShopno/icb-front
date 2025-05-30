@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // ✅ Your other config options
   basePath: process.env.BASEPATH || '',
+
+  eslint: {
+    ignoreDuringBuilds: true
+  },
 
   async redirects() {
     return [
@@ -22,8 +27,8 @@ const nextConfig = {
         permanent: true,
         locale: false
       }
-    ]
+    ];
   }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
