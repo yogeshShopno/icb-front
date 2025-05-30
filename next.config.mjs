@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ Your other config options
   basePath: process.env.BASEPATH || '',
 
   eslint: {
@@ -31,4 +30,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
