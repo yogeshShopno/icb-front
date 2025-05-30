@@ -16,7 +16,6 @@ const nextConfig = {
         permanent: true,
         locale: false
       },
-      // ✅ Safe fallback redirect for all other paths
       {
         source: '/:path*',
         destination: '/en/:path*',
