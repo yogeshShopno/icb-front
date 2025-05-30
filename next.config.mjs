@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.BASEPATH,
-  redirects: async () => {
+  basePath: process.env.BASEPATH || '',
+
+  async redirects() {
     return [
       {
         source: '/',
@@ -15,9 +16,10 @@ const nextConfig = {
         permanent: true,
         locale: false
       },
+      // ✅ Safe fallback redirect for all other paths
       {
-        source: '/((?!(?:en|fr|ar|front-pages|favicon.ico)\\b)):path',
-        destination: '/en/:path',
+        source: '/:path*',
+        destination: '/en/:path*',
         permanent: true,
         locale: false
       }
@@ -25,4 +27,4 @@ const nextConfig = {
   }
 }
 
-export default nextConfig
+module.exports = nextConfig
